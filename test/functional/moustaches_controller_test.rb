@@ -13,6 +13,7 @@ class MoustachesControllerTest < ActionController::TestCase
     get :new
     assert assigns(:moustache)
     assert assigns(:moustache).new_record?
+    assert_select "form#new_moustache[enctype='multipart/form-data']"
     assert_select "form#new_moustache" do
       assert_select "input#moustache_name[name='moustache[name]']"
       assert_select "input#moustache_image[name='moustache[image]']"

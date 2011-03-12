@@ -1,5 +1,5 @@
 <h1>Home</h1>
-<%= form_for @moustache do |f| %>
+<%= form_for @moustache, :html => { :multipart => true } do |f| %>
 	<%= f.text_field :name %>
 	<%= f.file_field :image %>
 	<%= f.submit %>
