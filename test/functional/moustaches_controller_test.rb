@@ -9,5 +9,8 @@ class MoustachesControllerTest < ActionController::TestCase
   test "should get new" do
     get :new
     assert assigns(:moustache)
+    assert assigns(:moustache).new_record?
   end
+  
+  
 end
