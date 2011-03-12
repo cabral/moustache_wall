@@ -26,5 +26,10 @@ class MoustachesControllerTest < ActionController::TestCase
     end
     assert_redirected_to moustaches_path
   end
+  
+  test "should create new moustache with image" do
+    post :create, :moustache => {:name => 'diogo_moustache', :image => fixture_file_upload("files/mustache.jpg", 'r')}
+    assert File.exists? "#{Rails.root}/public/moustaches/diogo_moustache.jpg"
+  end
     
 end

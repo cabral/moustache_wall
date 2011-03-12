@@ -15,5 +15,14 @@ class MoustacheTest < ActiveSupport::TestCase
     assert @moustache.errors[:name].present?
   end
   
+  test "should save image path" do
+    @moustache = Moustache.new
+    @moustache.name = "Vascaino"
+    @moustache.image = File.open("#{Rails.root}/test/fixtures/vascaino.jpg")
+    assert @moustache.save
+    assert_equal 'moustaches/Vascaino.jpg', @moustache.img_path
+    assert File.exists? "#{Rails.root}/public/moustaches/Vascaino.jpg"
+  end
+  
   
 end
