@@ -8,4 +8,9 @@ class MoustachesController < ApplicationController
     @moustache = Moustache.new
   end
 
+  def create
+    @moustache = Moustache.create params[:moustache]
+    redirect_to moustaches_path
+  end
+
 end

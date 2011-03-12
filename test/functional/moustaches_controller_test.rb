@@ -16,5 +16,12 @@ class MoustachesControllerTest < ActionController::TestCase
     end
   end
   
+  test "should created new moustache" do
+    assert_difference "Moustache.count", 1 do
+      post :create, :moustache => {:name => 'diogo moustache'}
+      assert_equal 'diogo moustache', assigns(:moustache).name
+    end
+    assert_redirected_to moustaches_path
+  end
   
 end
