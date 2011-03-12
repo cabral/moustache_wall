@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class HomeTest < ActionDispatch::IntegrationTest
+class MoustacheTest < ActionDispatch::IntegrationTest
 
   test "should have a homepage" do
     r = get '/'
