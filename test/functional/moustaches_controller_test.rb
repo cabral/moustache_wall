@@ -3,8 +3,10 @@ require 'test_helper'
 class MoustachesControllerTest < ActionController::TestCase
   # Replace this with your real tests.
   test "should return list of moustaches" do
+    #Moustache.create :name => 'Bigorna'
     get :index
     assert assigns :moustaches
+    assert_select "table#moustaches tr",2
   end
   test "should get new" do
     get :new
@@ -23,5 +25,5 @@ class MoustachesControllerTest < ActionController::TestCase
     end
     assert_redirected_to moustaches_path
   end
-  
+    
 end

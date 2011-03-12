@@ -1,1 +1,11 @@
 <h1>Home</h1>
+<table id="moustaches">
+<tr>
+	<th>Name</th>
+</tr>
+<% @moustaches.each do |m|%>
+<tr>
+	<td><%= m.name %></td>
+</tr>
+<% end %>
+</table>
