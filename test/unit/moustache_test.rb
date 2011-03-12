@@ -7,4 +7,10 @@ class MoustacheTest < ActiveSupport::TestCase
   test "should create a belgian moustache" do
     assert_equal 'Belgian', @moustache.name
   end
+  
+  test "should fail without a name" do
+    @moustache.name = nil
+    @moustache.valid?
+    assert @moustache.errors[:name].present?
+  end 
 end
