@@ -6,6 +6,7 @@
 <% @moustaches.each do |m|%>
 <tr>
 	<td><%= m.name %></td>
+	<td><%= image_tag "/../#{m.img_path}" %>
 </tr>
 <% end %>
 </table>
