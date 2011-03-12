@@ -1,7 +1,7 @@
 require 'test_helper'
 class MoustacheTest < ActiveSupport::TestCase
   def setup
-    @moustache = Moustache.create :name => 'Belgian'
+    @moustache = Moustache.where(:name => 'Belgian').first
   end
 
   test "should create a belgian moustache" do
