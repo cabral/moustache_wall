@@ -6,4 +6,8 @@ class MoustachesControllerTest < ActionController::TestCase
     get :index
     assert assigns :moustaches
   end
+  test "should get new" do
+    get :new
+    assert assigns(:moustache)
+  end
 end
