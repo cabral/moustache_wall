@@ -6,11 +6,8 @@ class MoustachesControllerTest < ActionController::TestCase
     #Moustache.create :name => 'Bigorna'
     get :index
     assert assigns :moustaches
-    assert_select "table#moustaches tr",2 do
-      assert_select "img"
-    end
+    assert_select "table#moustaches tr",2
     assert_select "a[href='#{new_moustach_path}']"
-    
   end
   test "should get new" do
     get :new
