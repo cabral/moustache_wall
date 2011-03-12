@@ -15,6 +15,7 @@ class MoustachesControllerTest < ActionController::TestCase
     assert assigns(:moustache).new_record?
     assert_select "form#new_moustache" do
       assert_select "input#moustache_name[name='moustache[name]']"
+      assert_select "input#moustache_image[name='moustache[image]']"
       assert_select "input[type='submit']"
     end
   end

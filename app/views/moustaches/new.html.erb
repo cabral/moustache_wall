@@ -1,5 +1,6 @@
 <h1>Home</h1>
 <%= form_for @moustache do |f| %>
 	<%= f.text_field :name %>
+	<%= f.file_field :image %>
 	<%= f.submit %>
 <% end %>
