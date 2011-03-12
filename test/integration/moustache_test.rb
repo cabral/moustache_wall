@@ -6,4 +6,9 @@ class MoustacheTest < ActionDispatch::IntegrationTest
     r = get '/'
     assert_equal 200, r
   end
+  
+  # test "should list moustaches" do
+  #   r = get '/'
+  #   
+  # end
 end
